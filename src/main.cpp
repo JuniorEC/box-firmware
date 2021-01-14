@@ -27,6 +27,7 @@ void messageReceived(String &topic, String &payload)
   if (topic.equals("/devices/" + String(device_id) + "/commands"))
   {
     // TODO
+    
   }
 
   if (topic.equals("/devices/" + String(device_id) + "/config"))

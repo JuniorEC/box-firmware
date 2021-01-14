@@ -59,7 +59,7 @@ void Port::setDigitalpin(int digitalpin)
 
 String Port::toString() {
   return String("{\"id\": \"") + String(this->id) +
-         String("\",\"cabinetid\": \"") + String(this->cabinetid) +
+         String("\",\"armario\": \"") + String(this->cabinetid) +
          String("\",\"analogpin\": \"") + String(this->analogpin) +
          String("\",\"digitalpin\": \"") + String(this->digitalpin) +
          String("\"}");

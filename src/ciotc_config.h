@@ -19,8 +19,8 @@
 // in https://www.hackster.io/arichetta/add-ssl-certificates-to-mkr1000-93c89d
 
 // Wifi network details.
-const char* ssid = "Copa 714 2g";
-const char* password = "1305dhuly";
+const char* ssid = "SSID";
+const char* password = "SENHA";
 
 // Cloud iot details.
 const char* project_id = "projetol-3efbd";
