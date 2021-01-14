@@ -1,0 +1,18 @@
+gcloud iot registries create node-registry --region=us-central1 --event-notification-config=topic=lockers --enable-mqtt-config --enable-http-config
+
+
+gcloud iot devices create nodedev --registry=node-registry --region=us-central1 --public-key="path=./ec_public.pem,type=es256"
+
+
+gcloud pubsub subscriptions create nodesub --topic=lockers
+
+
+gcloud pubsub subscriptions pull --limit 500 --auto-ack nodesub
+gcloud pubsub subscriptions pull --auto-ack nodesub --limit=1
+
+
+gcloud iot registries credentials create --path=ca_cert_registry.pem  --project=ProjetoL  --registry=secret --region=us-central1
+
+gcloud iot devices create nodedev --registry=node-registry --region=us-central1 --public-key path=ec_cert_device1.pem,type=es256-x509-pem
+
+
